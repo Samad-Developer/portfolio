@@ -4,11 +4,21 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
+      {
+    title: "Design System",
+    description:
+      "A comprehensive design system and component library used across multiple products, ensuring consistency.",
+    image: "/images/amfi.png",
+    tags: ["React", "Storybook", "Figma", "a11y"],
+    liveUrl: "#",
+    githubUrl: "#",
+    color: "lime",
+  },
   {
     title: "E-Commerce Platform",
     description:
       "A modern e-commerce solution built with Next.js, featuring real-time inventory management and Stripe integration.",
-    image: "/modern-ecommerce-dashboard-dark-theme.jpg",
+    image: "/images/eatx.png",
     tags: ["Next.js", "TypeScript", "Stripe", "Prisma"],
     liveUrl: "#",
     githubUrl: "#",
@@ -18,22 +28,13 @@ const projects = [
     title: "AI Dashboard",
     description:
       "An intelligent analytics dashboard that visualizes complex data sets with interactive charts and AI-powered insights.",
-    image: "/ai-analytics-dashboard-purple-theme.jpg",
+    image: "/images/foodordering.png",
     tags: ["React", "D3.js", "Python", "TensorFlow"],
     liveUrl: "#",
     githubUrl: "#",
     color: "magenta",
   },
-  {
-    title: "Design System",
-    description:
-      "A comprehensive design system and component library used across multiple products, ensuring consistency.",
-    image: "/design-system-component-library.png",
-    tags: ["React", "Storybook", "Figma", "a11y"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "lime",
-  },
+
   {
     title: "Real-time Collab App",
     description:

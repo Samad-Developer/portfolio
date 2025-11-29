@@ -4,37 +4,37 @@ import { Lightbulb, Search, PenTool, Code2, Rocket, RefreshCw } from "lucide-rea
 
 const approaches = [
   {
-    step: "01",
+    step: "1",
     icon: Search,
     title: "Discovery",
     description: "Deep dive into understanding the problem, users, and goals.",
   },
   {
-    step: "02",
+    step: "2",
     icon: Lightbulb,
     title: "Strategy",
     description: "Creating a clear roadmap with tech stack and architecture.",
   },
   {
-    step: "03",
+    step: "3",
     icon: PenTool,
     title: "Design",
     description: "Wireframes to high-fidelity prototypes with perfect UX.",
   },
   {
-    step: "04",
+    step: "4",
     icon: Code2,
     title: "Develop",
     description: "Clean, maintainable code with rigorous testing.",
   },
   {
-    step: "05",
+    step: "5",
     icon: Rocket,
     title: "Launch",
     description: "Optimized deployment with CI/CD and monitoring.",
   },
   {
-    step: "06",
+    step: "6",
     icon: RefreshCw,
     title: "Iterate",
     description: "Continuous improvement based on feedback.",
@@ -76,7 +76,7 @@ export function ApproachSection() {
 
                 <div className="relative">
                   {/* Step number */}
-                  <span className="absolute -top-2 -right-2 text-6xl font-bold text-foreground/5 group-hover:text-[#f7c948]/10 transition-colors">
+                  <span className="absolute -top-2 -left-2 text-6xl font-bold text-foreground/5 group-hover:text-[#f7c948]/10 transition-colors">
                     {item.step}
                   </span>
 

@@ -11,7 +11,7 @@ import { ServicesSection } from "@/components/services-section"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="bg-background">
       <Navigation />
       <HeroSection />
       <AboutSection />

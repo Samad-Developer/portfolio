@@ -43,7 +43,7 @@ export function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href="#" className="text-xl font-semibold tracking-tight group">
-              <span className="text-foreground">Samad</span>
+              <span className="text-foreground">samad</span>
               <span className="text-cyan">.</span>
               <span className="text-muted-foreground group-hover:text-foreground transition-colors">dev</span>
             </a>

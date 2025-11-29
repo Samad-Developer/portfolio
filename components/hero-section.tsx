@@ -104,7 +104,7 @@ function InteractiveShowcase() {
               <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
               <div
                 className={`transition-all duration-500 ${
-                  activeCard === idx ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+                  "opacity-100 translate-y-0"
                 }`}
               >
                 {item.demo}
@@ -117,39 +117,7 @@ function InteractiveShowcase() {
   )
 }
 
-function AnimatedStats() {
-  const [visible, setVisible] = useState(false)
 
-  useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 500)
-    return () => clearTimeout(timer)
-  }, [])
-
-  const stats = [
-    { value: "50+", label: "Projects Delivered" },
-    { value: "3+", label: "Years Experience" },
-    { value: "100%", label: "Client Satisfaction" },
-  ]
-
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-8 mt-12">
-      {stats.map((stat, idx) => (
-        <div
-          key={stat.label}
-          className={`text-center transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-          style={{ transitionDelay: `${idx * 150}ms` }}
-        >
-          <div className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#0ae448] to-[#abff84]">
-            {stat.value}
-          </div>
-          <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
-        </div>
-      ))}
-    </div>
-  )
-}
 
 function TechOrbit() {
   const techs = [
@@ -252,11 +220,11 @@ export function HeroSection() {
 
         <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
           You've just found the developer who transforms ideas into{" "}
-          <span className="text-[#0ae448]">jaw-dropping digital experiences</span>. Modern, sleek, and built to make
+          <span className="">jaw-dropping digital experiences</span>. Modern, sleek, and built to make
           your competitors jealous.
         </p>
 
-        <AnimatedStats />
+
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 mt-10 mb-8">
@@ -271,14 +239,14 @@ export function HeroSection() {
               Start Your Project
             </a>
           </Button>
-          <Button
+          {/* <Button
             size="lg"
             variant="outline"
             className="border-[#0ae448]/50 hover:bg-[#0ae448]/10 hover:border-[#0ae448] px-8 bg-transparent h-12 text-base"
             asChild
           >
             <a href="#projects">See What's Possible</a>
-          </Button>
+          </Button> */}
         </div>
 
         {/* Social links */}
