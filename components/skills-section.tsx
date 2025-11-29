@@ -1,27 +1,114 @@
 "use client"
 
 const skills = [
+  // 1. Languages
   {
-    category: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"],
+    category: "Languages",
+    items: ["JavaScript", "TypeScript"],
     color: "#0ae448",
   },
+
+  // 2. Markup & Core Web
   {
-    category: "Styling",
-    items: ["Tailwind CSS", "SASS/SCSS", "Styled Components", "Framer Motion", "GSAP"],
+    category: "Markup & Core Web",
+    items: ["HTML5", "CSS3"],
+    color: "#3dd6ff",
+  },
+
+  // 3. Styling & UI Libraries
+  {
+    category: "Styling & UI Libraries",
+    items: [
+      "Tailwind CSS",
+      "SASS/SCSS",
+      "Styled Components",
+      "Ant Design",
+      "shadcn/ui",
+      "Material UI (MUI)",
+      "Framer Motion",
+      "GSAP"
+    ],
     color: "#abff84",
   },
+
+  // 4. State Management
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB"],
+    category: "State Management",
+    items: ["Redux Toolkit", "Zustand", "Context API"],
+    color: "#ffda79",
+  },
+
+  // 5. API Integration & Data Layer
+  {
+    category: "API & Data Layer",
+    items: [
+      "REST APIs",
+      "GraphQL",
+      "React Query",
+      "Axios",
+      "SWR"
+    ],
+    color: "#ffa552",
+  },
+
+  // 6. Testing
+  {
+    category: "Testing",
+    items: ["Jest", "React Testing Library"],
     color: "#ff6b35",
   },
+
+  // 7. Analytics & Tracking
   {
-    category: "Tools",
-    items: ["Git", "VS Code", "Figma", "Vercel", "Docker", "AWS"],
+    category: "Analytics & Tracking",
+    items: [
+      "Google Analytics",
+      "Vercel Analytics",
+      "Meta Pixel (Facebook Pixel)",
+      "Hotjar",
+      "PostHog"
+    ],
     color: "#f7c948",
   },
-]
+
+  // 8. Tools & Platforms
+  {
+    category: "Tools & Platforms",
+    items: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Figma",
+      "Vercel",
+      "Netlify",
+      "Docker",
+      "Chrome DevTools"
+    ],
+    color: "#b28dff",
+  },
+
+  // 9. Accessibility
+  {
+    category: "Accessibility",
+    items: ["ARIA", "Semantic HTML", "Color Contrast", "Keyboard Navigation"],
+    color: "#ff85a2",
+  },
+
+  // 10. UI/UX & Design Principles
+  {
+    category: "UI/UX",
+    items: [
+      "Responsive Design",
+      "Design Systems",
+      "User Flows",
+      "Wireframing",
+      "Prototyping",
+      "Micro-interactions"
+    ],
+    color: "#7afcff",
+  },
+];
+
 
 export function SkillsSection() {
   return (
