@@ -6,20 +6,40 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Send, Mail, Copy, Check, Sparkles, ArrowUpRight, MessageSquare, Zap, Clock } from "lucide-react"
+import emailjs from "@emailjs/browser";
+
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [copied, setCopied] = useState(false)
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    alert("Message sent! I'll get back to you soon.")
-    setFormData({ name: "", email: "", message: "" })
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      "service_vzhdo7l", // your EmailJS service ID
+      "template_papzwyb",  // your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      "vVHI724TDkxgm0BMB"   // your EmailJS public key
+    );
+
+    alert("Message sent! I'll get back to you soon.");
+    setFormData({ name: "", email: "", message: "" });
+  } catch (error) {
+    console.error(error);
+    alert("Oops! Something went wrong, please try again.");
+  } finally {
+    setIsSubmitting(false);
   }
+};
+
 
   const copyEmail = () => {
     navigator.clipboard.writeText("samad.frontend@gmail.com")
