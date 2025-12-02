@@ -1,42 +1,50 @@
 "use client"
 
-import { ArrowUpRight, Briefcase } from "lucide-react"
+import { ArrowUpRight, Briefcase, Calendar, MapPin } from "lucide-react"
 
 const experiences = [
   {
     period: "2022 — Present",
     role: "Senior Frontend Engineer",
     company: "TechCorp Inc.",
+    location: "Remote",
     companyUrl: "#",
     description:
       "Lead frontend development for the core product. Mentoring junior developers and establishing best practices.",
     skills: ["React", "TypeScript", "Next.js", "GraphQL"],
     highlight: true,
+    color: "#0ae448",
   },
   {
     period: "2020 — 2022",
     role: "Frontend Developer",
     company: "StartupXYZ",
+    location: "San Francisco",
     companyUrl: "#",
     description: "Built and maintained multiple client-facing applications with seamless user experiences.",
     skills: ["React", "JavaScript", "Tailwind CSS", "REST APIs"],
+    color: "#f7c948",
   },
   {
     period: "2019 — 2020",
     role: "Junior Web Developer",
     company: "Digital Agency",
+    location: "New York",
     companyUrl: "#",
     description:
       "Developed responsive websites for various clients. Learned modern frameworks and agile methodologies.",
     skills: ["HTML", "CSS", "JavaScript", "Vue.js"],
+    color: "#ff6b35",
   },
   {
     period: "2018 — 2019",
     role: "Web Development Intern",
     company: "Tech Startup",
+    location: "Boston",
     companyUrl: "#",
     description: "Built UI components and learned collaborative coding practices from experienced developers.",
     skills: ["HTML", "CSS", "JavaScript", "Git"],
+    color: "#abff84",
   },
 ]
 
@@ -62,53 +70,84 @@ export function ExperienceSection() {
           </h2>
         </div>
 
-        <div className="relative">
-          {/* Center vertical line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#ff6b35] via-[#f7c948] to-[#0ae448]" />
+      
+        <div className="max-w-4xl mx-auto space-y-6">
+          {experiences.map((exp, index) => (
+            <div key={index} className="group relative">
+              {/* Connecting line */}
+              {index !== experiences.length - 1 && (
+                <div
+                  className="absolute left-8 top-full w-0.5 h-6 z-0"
+                  style={{ background: `linear-gradient(to bottom, ${exp.color}50, transparent)` }}
+                />
+              )}
 
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
               <div
-                key={index}
-                className={`relative flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                className="relative p-6 sm:p-8 rounded-2xl border bg-card/50 backdrop-blur-sm transition-all duration-500 hover:bg-card/80"
+                style={{
+                  borderColor: `${exp.color}20`,
+                }}
               >
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-background border-2 border-[#ff6b35] z-10">
-                  {exp.highlight && (
-                    <div className="absolute inset-0 rounded-full bg-[#ff6b35] animate-ping opacity-50" />
-                  )}
-                </div>
+                {/* Left accent */}
+                <div
+                  className="absolute left-0 top-6 bottom-6 w-1 rounded-full transition-all duration-300 group-hover:top-4 group-hover:bottom-4"
+                  style={{ backgroundColor: exp.color }}
+                />
 
-                {/* Content card */}
-                <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"}`}>
+                {/* Current badge */}
+                {exp.highlight && (
                   <div
-                    className={`group p-6 rounded-2xl bg-card border border-border hover:border-[#ff6b35]/50 transition-all duration-300 ${
-                      exp.highlight ? "border-[#ff6b35]/30" : ""
-                    }`}
+                    className="absolute -top-3 right-6 px-3 py-1 rounded-full text-xs font-bold"
+                    style={{ backgroundColor: exp.color, color: "black" }}
                   >
-                    {/* Period */}
-                    <span className="text-sm font-mono text-[#ff6b35] mb-2 inline-block">{exp.period}</span>
+                    Current Role
+                  </div>
+                )}
 
-                    {/* Role & Company */}
-                    <h3 className="text-xl font-semibold text-foreground mb-1">{exp.role}</h3>
+                <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                  {/* Left side - Period & Company */}
+                  <div className="lg:w-48 flex-shrink-0">
+                    <div
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-3"
+                      style={{ backgroundColor: `${exp.color}15` }}
+                    >
+                      <Calendar className="w-3.5 h-3.5" style={{ color: exp.color }} />
+                      <span className="text-sm font-medium" style={{ color: exp.color }}>
+                        {exp.period}
+                      </span>
+                    </div>
+
                     <a
                       href={exp.companyUrl}
-                      className="text-muted-foreground hover:text-[#f7c948] transition-colors inline-flex items-center gap-1 mb-3 group/link"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group/link"
                     >
-                      <Briefcase className="w-3 h-3" />
-                      {exp.company}
-                      <ArrowUpRight className="h-3 w-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                      <Briefcase className="w-4 h-4" style={{ color: exp.color }} />
+                      <span className="font-medium">{exp.company}</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" />
                     </a>
 
-                    {/* Description */}
-                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{exp.description}</p>
+                    <div className="flex items-center gap-1.5 text-sm text-muted-foreground mt-1">
+                      <MapPin className="w-3.5 h-3.5" />
+                      {exp.location}
+                    </div>
+                  </div>
+
+                  {/* Right side - Role & Description */}
+                  <div className="flex-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">{exp.role}</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-5">{exp.description}</p>
 
                     {/* Skills */}
-                    <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? "justify-end" : "justify-start"}`}>
+                    <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-2 py-1 text-xs font-mono rounded-md bg-[#0ae448]/10 text-[#0ae448] border border-[#0ae448]/20"
+                          className="px-3 py-1.5 text-xs font-medium rounded-full border transition-all duration-300 hover:scale-105"
+                          style={{
+                            borderColor: `${exp.color}40`,
+                            color: exp.color,
+                            backgroundColor: `${exp.color}08`,
+                          }}
                         >
                           {skill}
                         </span>
@@ -117,11 +156,14 @@ export function ExperienceSection() {
                   </div>
                 </div>
 
-                {/* Empty space for the other side */}
-                <div className="w-[calc(50%-2rem)]" />
+                {/* Hover glow */}
+                <div
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{ boxShadow: `inset 0 0 60px ${exp.color}08` }}
+                />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* Resume CTA */}
