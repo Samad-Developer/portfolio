@@ -168,7 +168,7 @@ export function SkillsSection() {
                 ].map((tech) => (
                   <span
                     key={`${setIndex}-${tech}`}
-                    className="text-4xl font-bold text-muted/20 whitespace-nowrap hover:text-[#0ae448]/30 transition-colors cursor-default"
+                    className="text-4xl font-bold text-gray-700 whitespace-nowrap hover:text-[#0ae448]/30 transition-colors cursor-default"
                   >
                     {tech}
                   </span>

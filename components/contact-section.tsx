@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Send, Mail, Copy, Check, Sparkles, ArrowUpRight, MessageSquare, Zap, Clock } from "lucide-react"
 import emailjs from "@emailjs/browser";
-
+import { toast } from "sonner"
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -30,7 +30,11 @@ const handleSubmit = async (e: React.FormEvent) => {
       "vVHI724TDkxgm0BMB"   // your EmailJS public key
     );
 
-    alert("Message sent! I'll get back to you soon.");
+    // we will use toastify to show a success message sonner center
+    toast.success("Message sent! I'll get back to you soon.", {
+      position: "top-center",
+    });
+
     setFormData({ name: "", email: "", message: "" });
   } catch (error) {
     console.error(error);

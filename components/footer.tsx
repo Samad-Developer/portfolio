@@ -10,7 +10,7 @@ export function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-4">
             <a href="#" className="text-lg font-semibold tracking-tight">
-              <span className="text-foreground">alex</span>
+              <span className="text-foreground">samad</span>
               <span className="text-cyan">.</span>
               <span className="text-muted-foreground">dev</span>
             </a>
@@ -49,7 +49,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="h-3 w-3 text-magenta fill-magenta" /> by Alex Chen © {new Date().getFullYear()}
+            Built with <Heart className="h-3 w-3 text-orange fill-orange" /> by Samad © {new Date().getFullYear()}
           </p>
         </div>
       </div>
