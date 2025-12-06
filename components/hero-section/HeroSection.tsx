@@ -2,8 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Rocket } from "lucide-react"
-import InteractiveFloatingCards from "./InteractiveFloatingCards"
-import TechOrbit from "./TechOrbit"
 
 
 export function HeroSection() {
@@ -21,7 +19,7 @@ export function HeroSection() {
 
 
       {/* Tech orbit decoration */}
-      <TechOrbit />
+      {/* <TechOrbit /> */}
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-10 text-center">
         {/* Status badge */}
@@ -80,9 +78,8 @@ export function HeroSection() {
         </div>
 
 
-        <InteractiveFloatingCards />
+        {/* <InteractiveFloatingCards /> */}
 
-        {/* <LiveBrowserDemo /> */}
 
         {/* Scroll indicator */}
         <div className="mt-8 animate-bounce">
