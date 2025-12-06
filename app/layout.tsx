@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "Frontend Developer specializing in React, Next.js, and modern web technologies.",
     type: "website",
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -34,8 +34,8 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
           <Toaster />
+          <Analytics />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )
