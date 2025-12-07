@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react"
 
 const stats = [
-  { value: 50, suffix: "+", label: "Projects Delivered" },
-  { value: 5, suffix: "+", label: "Years Experience" },
-  { value: 30, suffix: "+", label: "Happy Clients" },
+  { value: 20, suffix: "+", label: "Projects Delivered" },
+  { value: 3, suffix: "+", label: "Years Experience" },
+  { value: 20, suffix: "+", label: "Happy Clients" },
   { value: 99, suffix: "%", label: "Client Satisfaction" },
 ]
 
@@ -72,8 +72,9 @@ export function AboutSection() {
 
         <div className="text-center max-w-3xl mx-auto mb-20">
           <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed mb-8">
-            I'm a <span className="text-[#0ae448] font-semibold">Frontend Developer</span> passionate about building
-            beautiful, performant, and accessible web applications that make a difference.
+            As a<span className="text-[#0ae448] font-semibold"> Frontend Engineer, </span>
+            I build interfaces that are engineered for clarity, performance, and accessibility—experiences that are not only visually refined, but structurally sound and purpose-driven.
+
           </p>
           <p className="text-lg text-muted-foreground/80 leading-relaxed">
             With expertise in React, Next.js, and TypeScript, I transform complex problems into elegant solutions. I

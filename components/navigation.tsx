@@ -44,8 +44,8 @@ export function Navigation() {
             {/* Logo */}
             <a href="#" className="text-xl font-semibold tracking-tight group">
               <span className="text-foreground">samad</span>
-              <span className="text-cyan">.</span>
-              <span className="text-muted-foreground group-hover:text-foreground transition-colors">dev</span>
+              <span className="text-green">-</span>
+              <span className="text-muted-foreground group-hover:text-foreground transition-colors">site</span>
             </a>
 
             {/* Desktop Navigation */}

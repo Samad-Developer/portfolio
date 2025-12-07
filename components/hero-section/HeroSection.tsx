@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Rocket } from "lucide-react"
-import  TechOrbit  from "./TechOrbit"
-import  InteractiveFloatingCards  from "./InteractiveFloatingCards"
+import TechOrbit from "./TechOrbit"
+import InteractiveFloatingCards from "./InteractiveFloatingCards"
 
 
 export function HeroSection() {
@@ -12,8 +12,8 @@ export function HeroSection() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-1/4 left-1/4 w-[30vw] h-[30vw] bg-[#0ae448]/15 rounded-full blur-[100px] animate-pulse" />
-<div className="absolute bottom-1/4 right-1/4 w-[25vw] h-[25vw] bg-[#abff84]/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
-<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-[#ff6b35]/5 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s" }} />
+      <div className="absolute bottom-1/4 right-1/4 w-[25vw] h-[25vw] bg-[#abff84]/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-[#ff6b35]/5 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s" }} />
 
 
       {/* Grid background */}

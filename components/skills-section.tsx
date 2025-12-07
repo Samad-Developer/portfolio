@@ -15,18 +15,21 @@ const skills = [
     color: "#3dd6ff",
   },
 
+  // 3. Frameworks
+  {
+    category: "Frontend Frameworks",
+    items: ["React", "Next.js"],
+    color: "#3dd6ff",
+  },
+
   // 3. Styling & UI Libraries
   {
     category: "Styling & UI Libraries",
     items: [
       "Tailwind CSS",
       "SASS/SCSS",
-      "Styled Components",
       "Ant Design",
       "shadcn/ui",
-      "Material UI (MUI)",
-      "Framer Motion",
-      "GSAP"
     ],
     color: "#abff84",
   },
@@ -34,7 +37,7 @@ const skills = [
   // 4. State Management
   {
     category: "State Management",
-    items: ["Redux Toolkit", "Zustand", "Context API"],
+    items: ["Redux Toolkit", "Context API"],
     color: "#ffda79",
   },
 
@@ -43,10 +46,8 @@ const skills = [
     category: "API & Data Layer",
     items: [
       "REST APIs",
-      "GraphQL",
       "React Query",
       "Axios",
-      "SWR"
     ],
     color: "#ffa552",
   },
@@ -65,8 +66,6 @@ const skills = [
       "Google Analytics",
       "Vercel Analytics",
       "Meta Pixel (Facebook Pixel)",
-      "Hotjar",
-      "PostHog"
     ],
     color: "#f7c948",
   },
@@ -80,8 +79,6 @@ const skills = [
       "VS Code",
       "Figma",
       "Vercel",
-      "Netlify",
-      "Docker",
       "Chrome DevTools"
     ],
     color: "#b28dff",
@@ -159,9 +156,6 @@ export function SkillsSection() {
                   "Next.js",
                   "TypeScript",
                   "Tailwind",
-                  "Node.js",
-                  "GraphQL",
-                  "PostgreSQL",
                   "Vercel",
                   "Figma",
                   "Git",

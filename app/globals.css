@@ -150,16 +150,16 @@ html {
 }
 
 .dark::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #1a1a1a;
 }
 
 .dark::-webkit-scrollbar-thumb {
-  background: var(--green);
+  background: gray;
   border-radius: 4px;
 }
 
 .dark::-webkit-scrollbar-thumb:hover {
-  background: var(--green-light);
+  background: lightgray;
 }
 
 /* Custom animations */
