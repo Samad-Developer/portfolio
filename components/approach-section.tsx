@@ -52,7 +52,7 @@ export function ApproachSection() {
 
       <div className="max-w-5xl mx-auto px-6 relative">
         <div className="text-center mb-20">
-          <span className="inline-block text-[#f7c948] font-mono text-sm mb-4 tracking-wider">03. MY APPROACH</span>
+          <span className="inline-block text-[#f7c948] font-mono text-sm mb-4 tracking-wider">02. MY APPROACH</span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             How I Build
             <span

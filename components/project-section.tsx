@@ -4,66 +4,45 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
-      {
-    title: "Design System",
+  {
+    title: "AMFI — Web3 Landing Experience",
     description:
-      "A comprehensive design system and component library used across multiple products, ensuring consistency.",
+      "A high-performance landing page for a blockchain ecosystem, engineered with precision UI, optimized animations, and a scalable component architecture.",
     image: "/images/amfi.png",
-    tags: ["React", "Storybook", "Figma", "a11y"],
+    tags: ["React", "Next.js", "GSAP", "Design Systems"],
     liveUrl: "#",
     githubUrl: "#",
     color: "lime",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Restaurant Operations Dashboard",
     description:
-      "A modern e-commerce solution built with Next.js, featuring real-time inventory management and Stripe integration.",
-    image: "/images/eatx.png",
-    tags: ["Next.js", "TypeScript", "Stripe", "Prisma"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "cyan",
-  },
-  {
-    title: "AI Dashboard",
-    description:
-      "An intelligent analytics dashboard that visualizes complex data sets with interactive charts and AI-powered insights.",
-    image: "/images/foodordering.png",
-    tags: ["React", "D3.js", "Python", "TensorFlow"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "magenta",
-  },
-
-  {
-    title: "Real-time Collab App",
-    description:
-      "A collaborative workspace application with real-time editing, video conferencing, and project management.",
-    image: "/collaboration-app-workspace-dark.jpg",
-    tags: ["Next.js", "WebSocket", "WebRTC", "Redis"],
+      "A full-stack dashboard for online food ordering systems—featuring real-time order flow, operational analytics, customer insights, and role-based management.",
+    image: "/images/dashboard.png",
+    tags: ["Next.js", "WebSocket", "REST APIs", "Redis"],
     liveUrl: "#",
     githubUrl: "#",
     color: "orange",
   },
   {
-    title: "Crypto Portfolio Tracker",
+    title: "SaaS Platform for Online Ordering",
     description:
-      "Track cryptocurrency investments with real-time price updates, portfolio analytics, and market insights.",
-    image: "/crypto-portfolio-tracker-dark-theme.jpg",
-    tags: ["React", "Web3", "Chart.js", "API"],
-    liveUrl: "#",
-    githubUrl: "#",
-    color: "cyan",
-  },
-  {
-    title: "Task Management App",
-    description: "A productivity app with drag-and-drop boards, team collaboration features, and automated workflows.",
-    image: "/task-management-kanban-board-dark.jpg",
-    tags: ["Next.js", "DnD Kit", "Zustand", "Supabase"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "A production-grade SaaS website for restaurants to manage menus, orders, and digital storefronts with a clean multi-tenant architecture.",
+    image: "/images/food.png",
+    tags: ["React", "Next.js", "TypeScript", "SaaS Architecture"],
+    liveUrl: "https://hotnspicypk.com/",
     color: "magenta",
   },
+  {
+    title: "EatX — POS & Storefront Landing",
+    description:
+      "A conversion-focused landing page for a restaurant tech company offering POS systems and complete online storefront solutions.",
+    image: "/images/eatx.png",
+    tags: ["Next.js", "TypeScript", "Shadcn", "Framer Motion"],
+    liveUrl: "https://eatx.vercel.app/",
+    githubUrl: "#",
+    color: "cyan",
+  },  
 ]
 
 const colorMap: Record<string, string> = {
@@ -99,11 +78,11 @@ export function ProjectsSection() {
               className={`group relative bg-card rounded-2xl border border-border overflow-hidden transition-all duration-300 hover:shadow-2xl ${colorMap[project.color]}`}
             >
               {/* Project image */}
-              <div className="relative overflow-hidden aspect-video">
+              <div className="relative overflow-hidden aspect-video p-2">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
 

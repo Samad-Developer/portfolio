@@ -1,24 +1,26 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowDown, Rocket } from "lucide-react"
-import TechOrbit from "./TechOrbit"
-import InteractiveFloatingCards from "./InteractiveFloatingCards"
-
+import { Button } from "@/components/ui/button";
+import { ArrowDown, Rocket } from "lucide-react";
+import TechOrbit from "./TechOrbit";
+import InteractiveFloatingCards from "./InteractiveFloatingCards";
 
 export function HeroSection() {
-
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-1/4 left-1/4 w-[30vw] h-[30vw] bg-[#0ae448]/15 rounded-full blur-[100px] animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-[25vw] h-[25vw] bg-[#abff84]/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-[#ff6b35]/5 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s" }} />
-
+      <div
+        className="absolute bottom-1/4 right-1/4 w-[25vw] h-[25vw] bg-[#abff84]/10 rounded-full blur-[100px] animate-pulse"
+        style={{ animationDelay: "1s" }}
+      />
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-[#ff6b35]/5 rounded-full blur-[120px] animate-pulse"
+        style={{ animationDelay: "2s" }}
+      />
 
       {/* Grid background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
-
 
       {/* Tech orbit decoration */}
       <TechOrbit />
@@ -30,30 +32,35 @@ export function HeroSection() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0ae448] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0ae448]"></span>
           </span>
-          <span className="text-sm text-[#0ae448]">Available for new projects</span>
+          <span className="text-sm text-[#0ae448]">
+            Available for new projects
+          </span>
         </div>
 
         <h1 className="text-6xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-balance">
-          <span className="text-foreground">
-
-            Beautiful Interfaces
-          </span>
+          <span className="text-foreground">Beautiful Interfaces</span>
           <br />
           <span
             className="bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(114.41deg, #0ae448 20.74%, #abff84 65.5%)" }}
+            style={{
+              backgroundImage:
+                "linear-gradient(114.41deg, #0ae448 20.74%, #abff84 65.5%)",
+            }}
           >
             That Boosts Your Brand
           </span>
         </h1>
 
         <p className="text-xl sm:text-2xl text-muted-foreground mb-4 font-medium">
-          Lightning Fast <span className="text-[#0ae448]">/</span> Stunning <span className="text-[#0ae448]">/</span> Relentlessly Optimized
+          Lightning Fast <span className="text-[#0ae448]">/</span> Stunning{" "}
+          <span className="text-[#0ae448]">/</span> Relentlessly Optimized
         </p>
 
         <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Ready for a website that makes visitors say <span className="text-[#f7c948] font-medium">"wow"</span>? Get
-          sleek, modern designs that convert visitors into customers and leave your competitors behind.
+          Ready for a website that makes visitors say{" "}
+          <span className="text-[#f7c948] font-medium">"wow"</span>? Get sleek,
+          modern designs that convert visitors into customers and leave your
+          competitors behind.
         </p>
 
         {/* CTA Buttons */}
@@ -61,7 +68,10 @@ export function HeroSection() {
           <Button
             size="lg"
             className="px-8 h-12 text-base text-background font-semibold group"
-            style={{ backgroundImage: "linear-gradient(114.41deg, #0ae448 20.74%, #abff84 65.5%)" }}
+            style={{
+              backgroundImage:
+                "linear-gradient(114.41deg, #0ae448 20.74%, #abff84 65.5%)",
+            }}
             asChild
           >
             <a href="#contact" className="flex items-center gap-2">
@@ -79,9 +89,7 @@ export function HeroSection() {
           </Button>
         </div>
 
-
         <InteractiveFloatingCards />
-
 
         {/* Scroll indicator */}
         <div className="mt-8 animate-bounce">
@@ -97,11 +105,17 @@ export function HeroSection() {
       {/* Keyframes for animations */}
       <style jsx>{`
         @keyframes slideIn {
-          0% { transform: translateX(-100%); }
-          50% { transform: translateX(0); }
-          100% { transform: translateX(-100%); }
+          0% {
+            transform: translateX(-100%);
+          }
+          50% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
         }
       `}</style>
     </section>
-  )
+  );
 }
