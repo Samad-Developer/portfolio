@@ -42,7 +42,7 @@ const projects = [
     liveUrl: "https://eatx.vercel.app/",
     githubUrl: "#",
     color: "cyan",
-  },  
+  },
 ]
 
 const colorMap: Record<string, string> = {
@@ -71,7 +71,7 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2  gap-6">
           {projects.map((project) => (
             <div
               key={project.title}
@@ -102,7 +102,7 @@ export function ProjectsSection() {
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-secondary text-foreground border border-border hover:scale-110 transition-transform"
                   >
-                    <Github className="h-5 w-5" />
+                    <Github className="h-5 w-5" />``
                   </a>
                 </div>
               </div>
@@ -130,14 +130,14 @@ export function ProjectsSection() {
         </div>
 
         {/* View all projects link */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button variant="outline" size="lg" className="group bg-transparent" asChild>
             <a href="#">
               View All Projects
               <ArrowUpRight className="h-4 w-4 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   )

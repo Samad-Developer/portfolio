@@ -5,7 +5,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Send, Mail, Copy, Check, Sparkles, ArrowUpRight, MessageSquare, Zap, Clock } from "lucide-react"
+import { Send, Mail, Copy, Check, Sparkles, ArrowUpRight, MessageSquare, Zap, Clock, Linkedin, Github, Twitter } from "lucide-react"
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner"
 
@@ -14,35 +14,35 @@ export function ContactSection() {
   const [copied, setCopied] = useState(false)
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    await emailjs.send(
-      "service_vzhdo7l", // your EmailJS service ID
-      "template_papzwyb",  // your EmailJS template ID
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-      },
-      "vVHI724TDkxgm0BMB"   // your EmailJS public key
-    );
+    try {
+      await emailjs.send(
+        "service_vzhdo7l", // your EmailJS service ID
+        "template_papzwyb",  // your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "vVHI724TDkxgm0BMB"   // your EmailJS public key
+      );
 
-    // we will use toastify to show a success message sonner center
-    toast.success("Message sent! I'll get back to you soon.", {
-      position: "top-center",
-    });
+      // we will use toastify to show a success message sonner center
+      toast.success("Message sent! I'll get back to you soon.", {
+        position: "top-center",
+      });
 
-    setFormData({ name: "", email: "", message: "" });
-  } catch (error) {
-    console.error(error);
-    alert("Oops! Something went wrong, please try again.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      alert("Oops! Something went wrong, please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
 
   const copyEmail = () => {
@@ -52,9 +52,9 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 
   const quickLinks = [
-    { label: "GitHub", url: "#", icon: "GH" },
-    { label: "LinkedIn", url: "#", icon: "LI" },
-    { label: "Twitter", url: "#", icon: "TW" },
+    { label: "GitHub", url: "https://github.com/Samad-Developer", icon: Github },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/abdussamad27/", icon: Linkedin },
+    { label: "Twitter", url: "https://x.com/abdussamad_27", icon: Twitter },
   ]
 
   return (
@@ -141,7 +141,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground">Your Name</label>
                   <Input
-                    placeholder="John Doe"
+                    placeholder="Your name"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -152,7 +152,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <label className="text-sm font-medium text-foreground">Your Email</label>
                   <Input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="you@example.com"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -199,19 +199,26 @@ const handleSubmit = async (e: React.FormEvent) => {
           <div className="mt-10 text-center">
             <p className="text-sm text-muted-foreground mb-4">Or connect with me on</p>
             <div className="flex justify-center gap-3">
-              {quickLinks.map((link) => (
+              {[
+                { label: "GitHub", url: "https://github.com/Samad-Developer", icon: Github },
+                { label: "LinkedIn", url: "https://www.linkedin.com/in/abdussamad27/", icon: Linkedin },
+                { label: "Twitter", url: "https://x.com/abdussamad_27", icon: Twitter },
+              ].map((link) => (
                 <a
                   key={link.label}
                   href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex items-center gap-2 px-5 py-3 rounded-xl bg-card border border-border hover:border-[#0ae448]/50 transition-all duration-300"
                 >
-                  <span className="text-xs font-bold text-[#0ae448]">{link.icon}</span>
+                  <link.icon className="w-4 h-4 text-[#0ae448]" />
                   <span className="text-sm font-medium text-foreground">{link.label}</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#0ae448] transition-colors" />
                 </a>
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

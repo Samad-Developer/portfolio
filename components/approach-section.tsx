@@ -67,7 +67,7 @@ export function ApproachSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
           {approaches.map((item, index) => (
             <div key={item.step} className={`group relative ${index === 1 || index === 4 ? "md:translate-y-12" : ""}`}>
               <div className="relative p-6 sm:p-8 rounded-3xl bg-card border border-border hover:border-[#f7c948]/50 transition-all duration-500 text-center h-full">

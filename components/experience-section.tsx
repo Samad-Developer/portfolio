@@ -4,49 +4,52 @@ import { ArrowUpRight, Briefcase, Calendar, MapPin } from "lucide-react"
 
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "TechCorp Inc.",
-    location: "Remote",
+    period: "Oct 2025 — Present",
+    role: "Frontend Developer (Next.js)",
+    company: "Y Generation Systems",
+    location: "Remote · Karachi, Pakistan",
     companyUrl: "#",
     description:
-      "Lead frontend development for the core product. Mentoring junior developers and establishing best practices.",
-    skills: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Building and optimizing production-grade web applications using Next.js, React, and Shadcn UI. Implementing reusable UI components, API integrations, performance tuning, and delivering scalable frontend features.",
+    skills: ["Next.js", "React", "Shadcn UI", "TypeScript", "REST APIs"],
     highlight: true,
     color: "#0ae448",
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Developer",
-    company: "StartupXYZ",
-    location: "San Francisco",
+    period: "Apr 2024 — Oct 2025",
+    role: "Frontend Developer (React)",
+    company: "Y Generation Systems",
+    location: "On-site · Karachi, Pakistan",
     companyUrl: "#",
-    description: "Built and maintained multiple client-facing applications with seamless user experiences.",
-    skills: ["React", "JavaScript", "Tailwind CSS", "REST APIs"],
+    description:
+      "Developed responsive UI screens, admin dashboards, reusable components, and real-time features. Collaborated closely with backend teams and improved code quality through refactoring and best practices.",
+    skills: ["React.js", "JavaScript", "Ant Design", "Tailwind CSS", "API Integration"],
     color: "#f7c948",
   },
   {
-    period: "2019 — 2020",
-    role: "Junior Web Developer",
-    company: "Digital Agency",
-    location: "New York",
+    period: "Apr 2024 — May 2024",
+    role: "Frontend Development Intern",
+    company: "CodSoft",
+    location: "Remote · Kolkata, India",
     companyUrl: "#",
     description:
-      "Developed responsive websites for various clients. Learned modern frameworks and agile methodologies.",
-    skills: ["HTML", "CSS", "JavaScript", "Vue.js"],
+      "Completed a structured internship focused on React.js, frontend fundamentals, and real-world project tasks. Delivered multiple assignments and strengthened core development skills.",
+    skills: ["React.js", "JavaScript", "CSS", "Git", "REST APIs"],
     color: "#ff6b35",
   },
   {
-    period: "2018 — 2019",
-    role: "Web Development Intern",
-    company: "Tech Startup",
-    location: "Boston",
+    period: "May 2022 — Nov 2022",
+    role: "Web Development Trainee (6-Month Program)",
+    company: "Islamia College Peshawar (Chartered University)",
+    location: "Peshawar, Pakistan",
     companyUrl: "#",
-    description: "Built UI components and learned collaborative coding practices from experienced developers.",
-    skills: ["HTML", "CSS", "JavaScript", "Git"],
+    description:
+      "Completed a 6-month intensive NAVTTC-certified training program covering full-stack fundamentals, frontend development, and project-based learning.",
+    skills: ["React.js", "REST APIs", "HTML", "CSS", "JavaScript", "Git"],
     color: "#abff84",
   },
-]
+];
+
 
 export function ExperienceSection() {
   return (
@@ -167,7 +170,7 @@ export function ExperienceSection() {
         </div>
 
         {/* Resume CTA */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <a
             href="#"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-background transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(10,228,72,0.3)]"
@@ -176,7 +179,7 @@ export function ExperienceSection() {
             <span>Download Resume</span>
             <ArrowUpRight className="w-5 h-5" />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   )

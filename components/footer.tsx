@@ -11,13 +11,13 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <a href="#" className="text-lg font-semibold tracking-tight">
               <span className="text-foreground">samad</span>
-              <span className="text-cyan">.</span>
-              <span className="text-muted-foreground">dev</span>
+              <span className="text-green">-</span>
+              <span className="text-muted-foreground">site</span>
             </a>
           </div>
 
           {/* Social links */}
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <a
               href="https://github.com"
               target="_blank"
@@ -45,11 +45,11 @@ export function Footer() {
             >
               <Twitter className="h-5 w-5" />
             </a>
-          </div>
+          </div> */}
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="h-3 w-3 text-orange fill-orange" /> by Samad © {new Date().getFullYear()}
+            Built with <Heart className="h-3 w-3 text-green fill-green" /> by Samad © {new Date().getFullYear()}
           </p>
         </div>
       </div>
