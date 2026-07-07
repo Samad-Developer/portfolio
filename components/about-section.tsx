@@ -102,7 +102,7 @@ export function AboutSection() {
               key={stat.label}
               className="group relative text-center p-8 rounded-3xl bg-card/50 border border-border hover:border-[#0ae448]/50 transition-all duration-500"
             >
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-[#0ae448]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 rounded-3xl bg-linear-to-b from-[#0ae448]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative">
                 <div
                   className="text-4xl sm:text-5xl font-bold mb-2 bg-clip-text text-transparent"
